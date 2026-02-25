@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Workshop-of-ICANN-2026---The-35th-International-Conference-on-Artificial-Neural-Networks</title>
+  <title>Workshop @ ICANN 2026 - From Real Systems to AI Solutions: Learning for Spatiotemporal Dynamics</title>
   <style>
     body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
            margin: 0; line-height: 1.6; background: #0b0f19; color: #e8eefc; }
@@ -23,16 +23,24 @@
     .dates li { margin: 6px 0; }
     footer { padding: 24px 20px; opacity: .75; }
     code { background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 8px; }
+
+    /* Table style for program schedule */
+    table { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 14px; }
+    th, td { padding: 12px 14px; border-bottom: 1px solid #1f2a4a; vertical-align: top; }
+    th { text-align: left; font-weight: 600; background: rgba(255,255,255,.04); border-bottom: 1px solid #26345d; }
+    tr:last-child td { border-bottom: none; }
+    .muted { opacity: .85; }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
-      <h1>Workshop-of-ICANN-2026---The-35th-International-Conference-on-Artificial-Neural-Networks</h1>
-      <p class="subtitle">Workshop on Time Series @ ICANN-2026</p>
+      <h1>From Real Systems to AI Solutions: Learning for Spatiotemporal Dynamics</h1>
+      <p class="subtitle">Half-day Workshop @ ICANN 2026 — Learning for Real-World Spatiotemporal Systems</p>
       <nav>
         <a href="#about">About</a>
-        <a href="#cfp">Call for Papers</a>
+        <a href="#program">Program</a>
+        <a href="#topics">Topics</a>
         <a href="#dates">Important Dates</a>
         <a href="#submission">Submission</a>
       </nav>
@@ -41,115 +49,181 @@
 
   <main class="wrap">
     <section id="about">
-      <h2>About PAKDD-GLFM 2025</h2>
+      <h2>About the Workshop</h2>
       <div class="card">
-        <p>
-          In PAKDD-GLFM 2025 (Workshop on Graph Learning with Foundation Models @ PAKDD 2025),
-          we aim to bring together researchers and practitioners from academia and industry to
-          discuss and advance the state-of-the-art in graph machine learning with foundation models.
-        </p>
-        <p>
-          Graph Foundation Models (GFMs) represent a cutting-edge approach in graph machine learning
-          that integrates the power of large-scale foundation models with graph structures. Specifically,
-          GFMs are designed to effectively capture complex relationships and dependencies present in
-          graph-structured data, such as social networks, biological networks, and knowledge graphs.
-          By learning from diverse and extensive graph data, GFMs show emergent capabilities that
-          significantly enhance performance across various, even unseen, downstream tasks, such as
-          node/graph classification and link prediction.
-        </p>
-        <p>
-          As graphs continue to be a powerful tool for modeling real-world interactions, the development
-          of GFMs is becoming increasingly important with real-world applications spanning diverse fields,
-          including detecting anomalies in social networks, drug discovery through graph-based molecular
-          classification, enhancing recommendation systems for personalized content, and strengthening
-          cybersecurity by identifying vulnerabilities in network structures. Again, the emergent capabilities
-          of GFMs allow them to adapt to new applications, generalizing across diverse domains and uncovering
-          insights beyond the reach of traditional models.
-        </p>
+        <p><strong>Workshop Title:</strong> From Real Systems to AI Solutions: Learning for Spatiotemporal Dynamics</p>
+
+        <p><strong>Abstract:</strong> Real-world spatiotemporal systems—such as urban transportation, maritime, and low-altitude aviation economies—generate large, heterogeneous, and continuously evolving data streams with strong spatial dependencies, long-range temporal dynamics, and significant operational constraints. While recent advances in AI-based modeling have shown promising results on benchmark datasets, many approaches remain insufficiently grounded in real operational settings. This half-day workshop focuses on AI-enabled solutions for real-world spatiotemporal systems, with particular emphasis on transportation, maritime networks, and low-altitude aviation economies.</p>
+
+        <p>The workshop brings together researchers and leading domain experts with deep system-level knowledge to present real operational challenges, data limitations, and decision-making constraints through invited keynote and expert talks. Building on these real-system perspectives, the workshop explores how modern learning methods—such as deep neural models, graph and sequence representations, state-space approaches, and constraint-aware modeling—can be designed to meaningfully resolve practical spatiotemporal problems, supporting robust prediction and decision-making in complex systems.</p>
       </div>
     </section>
 
-    <section id="cfp">
-      <h2>Call For Papers</h2>
-      <p>The scope of this workshop includes (but is not limited to):</p>
-      <ul>
-        <li>Theoretical foundation of GFMs: Understanding their ability to generalize and remain resilient.</li>
-        <li>Building blocks of GFMs: Exploring the structural components that underpin graph foundation models.</li>
-        <li>Empirical analysis: Evaluation across tasks and datasets, identifying limitations.</li>
-        <li>Large-scale pre-training: Techniques to reduce computational costs while maintaining performance.</li>
-        <li>Fine-tuning and adaptation: Techniques for improving performance on target tasks.</li>
-        <li>Multi-modality in graph tasks: Integration of multi-modal data.</li>
-        <li>LLM + Graph learning: Combining large language models with graph learning to unlock new capabilities and applications.</li>
-        <li>New applications: Leveraging emergent capabilities for real-world scenarios.</li>
-      </ul>
+    <section id="program">
+      <h2>Program Schedule (Planned)</h2>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 22%;">Time</th>
+              <th style="width: 24%;">Session</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>13:30 – 13:35</td>
+              <td>Opening Remarks</td>
+              <td>Welcome and workshop overview</td>
+            </tr>
+            <tr>
+              <td>13:35 – 14:00</td>
+              <td>Keynote Talk 1</td>
+              <td>Invited keynote (20 min presentation + 5 min Q&amp;A)<br/>
+                  <span class="muted">Real-world challenges in transportation and maritime systems (proposed)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>14:00 – 14:15</td>
+              <td>Invited Talk 1</td>
+              <td>Invited expert presentation<br/>
+                  <span class="muted">Operational challenges and datasets from real-world spatiotemporal systems (proposed)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>14:15 – 15:00</td>
+              <td>Regular Paper Presentations I</td>
+              <td>3 regular papers × 15 min each</td>
+            </tr>
+            <tr>
+              <td>15:00 – 15:30</td>
+              <td>Tea Break &amp; Poster Session</td>
+              <td>Coffee/tea break; poster presentations and informal discussion</td>
+            </tr>
+            <tr>
+              <td>15:30 – 15:55</td>
+              <td>Keynote Talk 2</td>
+              <td>Invited keynote (20 min presentation + 5 min Q&amp;A)<br/>
+                  <span class="muted">AI-driven spatiotemporal modeling for real systems (proposed)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>15:55 – 16:10</td>
+              <td>Invited Talk 2</td>
+              <td>Invited expert presentation<br/>
+                  <span class="muted">Deployment lessons and AI solutions in practice (proposed)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>16:10 – 16:55</td>
+              <td>Regular Paper Presentations II</td>
+              <td>3 regular papers × 15 min each</td>
+            </tr>
+            <tr>
+              <td>16:55 – 17:00</td>
+              <td>Closing Remarks</td>
+              <td>Summary and wrap-up</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="topics">
+      <h2>Paper Scope / Topics of Interest</h2>
+      <p>We invite original research papers related to AI and learning for real-world spatiotemporal systems, including (but not limited to) the following topics:</p>
+
+      <div class="card">
+        <ul>
+          <li><strong>Spatiotemporal Modeling and Learning</strong>
+            <ul>
+              <li>Spatiotemporal deep learning for transportation, maritime, aviation</li>
+              <li>Long-range temporal dependency modeling in large-scale dynamic systems</li>
+              <li>Multi-resolution and multi-scale spatiotemporal representations</li>
+            </ul>
+          </li>
+
+          <li><strong>Sequence, State-Space, and Generative Models</strong>
+            <ul>
+              <li>State-space and selective state-space models for spatiotemporal data</li>
+              <li>Sequence modeling beyond attention (e.g., efficient recurrent and hybrid architectures)</li>
+              <li>Generative and diffusion models for spatiotemporal forecasting, simulation, and data recovery</li>
+              <li>Probabilistic and uncertainty-aware spatiotemporal modeling</li>
+            </ul>
+          </li>
+
+          <li><strong>Graph, Tensor, and High-Order Representations</strong>
+            <ul>
+              <li>Graph and hypergraph neural networks for spatiotemporal systems</li>
+              <li>Tensor-based modeling and factorization for multi-modal spatiotemporal data</li>
+              <li>High-order interaction modeling across space, time, and modalities</li>
+            </ul>
+          </li>
+
+          <li><strong>Geometric and Topological Learning</strong>
+            <ul>
+              <li>Geometry-aware and manifold-based spatiotemporal learning</li>
+              <li>Non-Euclidean representations for spatial networks</li>
+              <li>Topology-informed learning and persistence-based representations</li>
+            </ul>
+          </li>
+
+          <li><strong>Physics-, Constraint-, and Knowledge-Aware Models</strong>
+            <ul>
+              <li>Physics-informed and rule-consistent learning for spatiotemporal systems</li>
+              <li>Constraint-aware neural architectures for operational decision support</li>
+              <li>Integration of domain knowledge into data-driven spatiotemporal models</li>
+            </ul>
+          </li>
+
+          <li><strong>Efficiency, Scalability, and Deployment</strong>
+            <ul>
+              <li>Computationally efficient spatiotemporal models for large-scale systems</li>
+              <li>Memory- and energy-efficient learning architectures</li>
+              <li>Model compression, approximation, and scalable training strategies</li>
+            </ul>
+          </li>
+
+          <li><strong>Real-World Data, Systems, and Decision Support</strong>
+            <ul>
+              <li>Learning from noisy, incomplete, or heterogeneous spatiotemporal data</li>
+              <li>AI for operational decision-making in transportation and maritime systems</li>
+              <li>Case studies, benchmarks, and real-world deployments</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section id="dates">
       <h2>Important Dates</h2>
       <div class="card">
         <ul class="dates">
-          <li><strong>Workshop Paper Deadline:</strong> March 9, 2025 (Extended!)</li>
-          <li><strong>Acceptance Notification:</strong> March 15, 2025</li>
-          <li><strong>Camera-ready Submission:</strong> March 29, 2025</li>
+          <li><strong>Workshop Paper Deadline:</strong> <em>TBA</em></li>
+          <li><strong>Acceptance Notification:</strong> <em>TBA</em></li>
+          <li><strong>Camera-ready Submission:</strong> <em>TBA</em></li>
         </ul>
-        <p>All deadlines are <strong>23:59 Pacific Standard Time (PST)</strong>.</p>
+        <p class="muted">All deadlines and time zones will be announced on the official workshop page.</p>
       </div>
     </section>
 
     <section id="submission">
       <h2>Submission Instructions</h2>
       <div class="card">
-        <p><strong>Submission site:</strong> <a href="https://cmt3.research.microsoft.com/GLFM2025" target="_blank" rel="noreferrer">https://cmt3.research.microsoft.com/GLFM2025</a></p>
-        <p><strong>Submission format:</strong> Springer LNCS/LNAI manuscript submission guidelines and formatting template:
-          <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" target="_blank" rel="noreferrer">
-            Springer LNCS/LNAI Guidelines
-          </a>
-        </p>
-        <p><strong>Submission length:</strong> Accepting full papers (up to 12 pages, including references and appendices) and shorter papers.</p>
-        <p><strong>How to submit:</strong>
-          <a href="https://cmt3.research.microsoft.com/docs/help/author/author-submission-form.html" target="_blank" rel="noreferrer">
-            CMT Author Submission Help
-          </a>
-        </p>
+        <p><strong>Submission site:</strong> <em>TBA</em></p>
+        <p><strong>Submission format:</strong> <em>TBA (ICANN workshop format / camera-ready instructions will be provided)</em></p>
+        <p><strong>Submission length:</strong> <em>TBA</em></p>
 
-        <p>
-          Paper submission must be in English. All papers will be double-blind reviewed by the Program Committee based on
-          technical quality, relevance to the GLFM workshop, originality, significance, and presentation quality. All paper
-          submissions will be handled electronically. The author list and order cannot be changed after the paper is submitted.
-          Papers that do not comply with the Submission Policy will be rejected without review.
-        </p>
-
-        <p>
-          Each submitted paper must include an abstract up to 200 words. Each submitted paper must be no longer than 12 pages
-          (including references, appendices, etc.). Authors must use Springer LNCS/LNAI manuscript submission guidelines and
-          formatting template for their submissions. All papers must be submitted electronically through the GLFM's CMT paper
-          submission system in PDF format only.
-        </p>
-
-        <p>
-          GLFM 2025 will not accept any paper that, at the time of submission, is under review for, has already been published in,
-          or has already been accepted for publication in a journal or another venue with formally published proceedings. Authors are
-          also required not to submit their papers to other venues with formal publication during the GLFM 2025 review period. Papers
-          on arXiv do not violate this rule as long as the submitted paper does not cite them.
-        </p>
-
-        <p>
-          <strong>Proceedings and Publication:</strong> All accepted papers will be published in the official workshop proceedings volume
-          via Springer LNCS/LNAI. Authors of accepted papers will have their contributions included in this volume. By submitting a paper,
-          authors agree to have their paper published in the proceedings if it is accepted.
-        </p>
-
-        <p>
-          <strong>Acknowledgment:</strong> The Microsoft CMT service was used for managing the peer-reviewing process for this conference.
-          This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as
-          for software development and support.
+        <p class="muted">
+          Paper submission must be in English. Review policy, anonymity requirements, and publication information
+          will follow ICANN workshop guidelines and will be announced together with the submission portal.
         </p>
       </div>
     </section>
 
     <footer>
       <div class="wrap">
-        <p>© PAKDD-GLFM 2025 Workshop</p>
+        <p>© ICANN 2026 Workshop — From Real Systems to AI Solutions: Learning for Spatiotemporal Dynamics</p>
       </div>
     </footer>
   </main>
