@@ -31,7 +31,7 @@
     th { text-align: left; font-weight: 600; background: rgba(255,255,255,.04); border-bottom: 1px solid #26345d; }
     tr:last-child td { border-bottom: none; }
 
-    /* ✅ Organisers table list */
+    /* Organisers table list */
     .people-table {
       width: 100%;
       border-collapse: separate;
@@ -88,10 +88,10 @@
       <nav>
         <a href="#about">About</a>
         <a href="#organizers">Organizers</a>
-        <a href="#program">Program</a>
         <a href="#topics">Topics</a>
         <a href="#dates">Important Dates</a>
         <a href="#submission">Submission</a>
+        <a href="#program">Program</a>
       </nav>
     </div>
   </header>
@@ -100,16 +100,17 @@
     <section id="about">
       <h2>About the Workshop</h2>
       <div class="card">
-        <p><strong>Workshop Title:</strong> From Real Systems to AI Solutions: Learning for Spatiotemporal Dynamics</p>
-
-        <!-- ✅ Changed label: Abstract -> About the Workshop -->
-        <p><strong>About the Workshop:</strong> Real-world spatiotemporal systems—such as urban transportation, maritime, and low-altitude aviation economies—generate large, heterogeneous, and continuously evolving data streams with strong spatial dependencies, long-range temporal dynamics, and significant operational constraints. While recent advances in AI-based modeling have shown promising results on benchmark datasets, many approaches remain insufficiently grounded in real operational settings. This half-day workshop focuses on AI-enabled solutions for real-world spatiotemporal systems, with particular emphasis on transportation, maritime networks, and low-altitude aviation economies.</p>
-
-        <p>The workshop brings together researchers and leading domain experts with deep system-level knowledge to present real operational challenges, data limitations, and decision-making constraints through invited keynote and expert talks. Building on these real-system perspectives, the workshop explores how modern learning methods—such as deep neural models, graph and sequence representations, state-space approaches, and constraint-aware modeling—can be designed to meaningfully resolve practical spatiotemporal problems, supporting robust prediction and decision-making in complex systems.</p>
+        <!-- ✅ Removed title line and removed the keyword “Abstract/About the Workshop:” -->
+        <p>
+          Real-world spatiotemporal systems (e.g., transportation and maritime networks) produce heterogeneous,
+          evolving data with strong spatial dependencies and long-range temporal dynamics. This half-day workshop
+          connects operational challenges with modern learning methods—such as graph and sequence models,
+          state-space approaches, and constraint-aware learning—to support robust prediction and decision-making
+          in complex real systems.
+        </p>
       </div>
     </section>
 
-    <!-- ✅ Replaced: big photo cards -> table list with small avatars + affiliations -->
     <section id="organizers">
       <h2>Organizers</h2>
 
@@ -129,7 +130,6 @@
             <td>
               <p class="person-title">Jiayu Fang</p>
               <p class="person-sub">Workshop Organizer</p>
-              <!-- Optional links; remove if not needed -->
               <div class="person-links">
                 <!-- <a href="https://example.com">Homepage</a> -->
                 <!-- <a href="mailto:jiayu.fang@sydney.edu.au">Email</a> -->
@@ -139,90 +139,8 @@
               The University of Sydney
             </td>
           </tr>
-
-          <!-- ✅ Add more organisers by copying a row like below -->
-          <!--
-          <tr>
-            <td><img class="avatar" src="./name2.jpg" alt="Name Two"></td>
-            <td>
-              <p class="person-title">Name Two</p>
-              <p class="person-sub">Co-organizer</p>
-            </td>
-            <td>Affiliation Two</td>
-          </tr>
-          -->
         </tbody>
       </table>
-    </section>
-
-    <section id="program">
-      <h2>Program Schedule (Planned)</h2>
-      <div class="card">
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 22%;">Time</th>
-              <th style="width: 24%;">Session</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>13:30 – 13:35</td>
-              <td>Opening Remarks</td>
-              <td>Welcome and workshop overview</td>
-            </tr>
-            <tr>
-              <td>13:35 – 14:00</td>
-              <td>Keynote Talk 1</td>
-              <td>Invited keynote (20 min presentation + 5 min Q&amp;A)<br/>
-                  <span class="muted">Real-world challenges in transportation and maritime systems (proposed)</span>
-              </td>
-            </tr>
-            <tr>
-              <td>14:00 – 14:15</td>
-              <td>Invited Talk 1</td>
-              <td>Invited expert presentation<br/>
-                  <span class="muted">Operational challenges and datasets from real-world spatiotemporal systems (proposed)</span>
-              </td>
-            </tr>
-            <tr>
-              <td>14:15 – 15:00</td>
-              <td>Regular Paper Presentations I</td>
-              <td>3 regular papers × 15 min each</td>
-            </tr>
-            <tr>
-              <td>15:00 – 15:30</td>
-              <td>Tea Break &amp; Poster Session</td>
-              <td>Coffee/tea break; poster presentations and informal discussion</td>
-            </tr>
-            <tr>
-              <td>15:30 – 15:55</td>
-              <td>Keynote Talk 2</td>
-              <td>Invited keynote (20 min presentation + 5 min Q&amp;A)<br/>
-                  <span class="muted">AI-driven spatiotemporal modeling for real systems (proposed)</span>
-              </td>
-            </tr>
-            <tr>
-              <td>15:55 – 16:10</td>
-              <td>Invited Talk 2</td>
-              <td>Invited expert presentation<br/>
-                  <span class="muted">Deployment lessons and AI solutions in practice (proposed)</span>
-              </td>
-            </tr>
-            <tr>
-              <td>16:10 – 16:55</td>
-              <td>Regular Paper Presentations II</td>
-              <td>3 regular papers × 15 min each</td>
-            </tr>
-            <tr>
-              <td>16:55 – 17:00</td>
-              <td>Closing Remarks</td>
-              <td>Summary and wrap-up</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
     </section>
 
     <section id="topics">
@@ -314,6 +232,77 @@
           Paper submission must be in English. Review policy, anonymity requirements, and publication information
           will follow ICANN workshop guidelines and will be announced together with the submission portal.
         </p>
+      </div>
+    </section>
+
+    <!-- ✅ Moved Program Schedule to the last -->
+    <section id="program">
+      <h2>Program Schedule (Planned)</h2>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 22%;">Time</th>
+              <th style="width: 24%;">Session</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>13:30 – 13:35</td>
+              <td>Opening Remarks</td>
+              <td>Welcome and workshop overview</td>
+            </tr>
+            <tr>
+              <td>13:35 – 14:00</td>
+              <td>Keynote Talk 1</td>
+              <td>Invited keynote (20 min presentation + 5 min Q&amp;A)<br/>
+                  <span class="muted">Real-world challenges in transportation and maritime systems (proposed)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>14:00 – 14:15</td>
+              <td>Invited Talk 1</td>
+              <td>Invited expert presentation<br/>
+                  <span class="muted">Operational challenges and datasets from real-world spatiotemporal systems (proposed)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>14:15 – 15:00</td>
+              <td>Regular Paper Presentations I</td>
+              <td>3 regular papers × 15 min each</td>
+            </tr>
+            <tr>
+              <td>15:00 – 15:30</td>
+              <td>Tea Break &amp; Poster Session</td>
+              <td>Coffee/tea break; poster presentations and informal discussion</td>
+            </tr>
+            <tr>
+              <td>15:30 – 15:55</td>
+              <td>Keynote Talk 2</td>
+              <td>Invited keynote (20 min presentation + 5 min Q&amp;A)<br/>
+                  <span class="muted">AI-driven spatiotemporal modeling for real systems (proposed)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>15:55 – 16:10</td>
+              <td>Invited Talk 2</td>
+              <td>Invited expert presentation<br/>
+                  <span class="muted">Deployment lessons and AI solutions in practice (proposed)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>16:10 – 16:55</td>
+              <td>Regular Paper Presentations II</td>
+              <td>3 regular papers × 15 min each</td>
+            </tr>
+            <tr>
+              <td>16:55 – 17:00</td>
+              <td>Closing Remarks</td>
+              <td>Summary and wrap-up</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
