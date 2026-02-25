@@ -23,13 +23,52 @@
     .dates li { margin: 6px 0; }
     footer { padding: 24px 20px; opacity: .75; }
     code { background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 8px; }
+    .muted { opacity: .85; }
 
     /* Table style for program schedule */
     table { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 14px; }
     th, td { padding: 12px 14px; border-bottom: 1px solid #1f2a4a; vertical-align: top; }
     th { text-align: left; font-weight: 600; background: rgba(255,255,255,.04); border-bottom: 1px solid #26345d; }
     tr:last-child td { border-bottom: none; }
-    .muted { opacity: .85; }
+
+    /* People grid */
+    .people-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .person-card{
+      border: 1px solid #26345d;
+      background: rgba(255,255,255,.03);
+      border-radius: 14px;
+      padding: 14px;
+      text-align: center;
+    }
+    .person-card img{
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid #223055;
+    }
+    .person-name{
+      margin-top: 10px;
+      font-weight: 600;
+    }
+    .person-affil{
+      margin-top: 4px;
+      font-size: 14px;
+      opacity: .85;
+    }
+    .person-links{
+      margin-top: 8px;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
   </style>
 </head>
 <body>
@@ -39,6 +78,7 @@
       <p class="subtitle">Half-day Workshop @ ICANN 2026 — Learning for Real-World Spatiotemporal Systems</p>
       <nav>
         <a href="#about">About</a>
+        <a href="#organizers">Organizers</a>
         <a href="#program">Program</a>
         <a href="#topics">Topics</a>
         <a href="#dates">Important Dates</a>
@@ -56,6 +96,18 @@
         <p><strong>Abstract:</strong> Real-world spatiotemporal systems—such as urban transportation, maritime, and low-altitude aviation economies—generate large, heterogeneous, and continuously evolving data streams with strong spatial dependencies, long-range temporal dynamics, and significant operational constraints. While recent advances in AI-based modeling have shown promising results on benchmark datasets, many approaches remain insufficiently grounded in real operational settings. This half-day workshop focuses on AI-enabled solutions for real-world spatiotemporal systems, with particular emphasis on transportation, maritime networks, and low-altitude aviation economies.</p>
 
         <p>The workshop brings together researchers and leading domain experts with deep system-level knowledge to present real operational challenges, data limitations, and decision-making constraints through invited keynote and expert talks. Building on these real-system perspectives, the workshop explores how modern learning methods—such as deep neural models, graph and sequence representations, state-space approaches, and constraint-aware modeling—can be designed to meaningfully resolve practical spatiotemporal problems, supporting robust prediction and decision-making in complex systems.</p>
+      </div>
+    </section>
+
+    <!-- ✅ Added: Organizer photo + name -->
+    <section id="organizers">
+      <h2>Organizers</h2>
+      <div class="people-grid">
+        <div class="person-card">
+          <!-- Image is in the same folder as this HTML file -->
+          <img src="_STU6539.jpg" alt="Jiayu Fang">
+          <div class="person-name">Jiayu Fang</div>
+        </div>
       </div>
     </section>
 
