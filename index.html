@@ -31,41 +31,50 @@
     th { text-align: left; font-weight: 600; background: rgba(255,255,255,.04); border-bottom: 1px solid #26345d; }
     tr:last-child td { border-bottom: none; }
 
-    /* People grid */
-    .people-grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 14px;
-      margin-top: 12px;
-    }
-    .person-card{
+    /* ✅ Organisers table list */
+    .people-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+      border-radius: 14px;
       border: 1px solid #26345d;
       background: rgba(255,255,255,.03);
-      border-radius: 14px;
-      padding: 14px;
-      text-align: center;
     }
-    .person-card img{
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
+    .people-table thead th{
+      background: rgba(255,255,255,.04);
+      border-bottom: 1px solid #26345d;
+    }
+    .people-table td, .people-table th{
+      padding: 12px 14px;
+      border-bottom: 1px solid #1f2a4a;
+      vertical-align: middle;
+    }
+    .people-table tr:last-child td{
+      border-bottom: none;
+    }
+    .avatar{
+      width: 56px;
+      height: 56px;
       border-radius: 12px;
+      object-fit: cover;
       border: 1px solid #223055;
+      background: rgba(255,255,255,.03);
+      display: block;
     }
-    .person-name{
-      margin-top: 10px;
+    .person-title{
       font-weight: 600;
+      margin: 0;
     }
-    .person-affil{
-      margin-top: 4px;
+    .person-sub{
+      margin: 2px 0 0;
       font-size: 14px;
       opacity: .85;
     }
     .person-links{
-      margin-top: 8px;
+      margin-top: 6px;
       font-size: 14px;
       display: flex;
-      justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
     }
@@ -93,22 +102,57 @@
       <div class="card">
         <p><strong>Workshop Title:</strong> From Real Systems to AI Solutions: Learning for Spatiotemporal Dynamics</p>
 
-        <p><strong>Abstract:</strong> Real-world spatiotemporal systems—such as urban transportation, maritime, and low-altitude aviation economies—generate large, heterogeneous, and continuously evolving data streams with strong spatial dependencies, long-range temporal dynamics, and significant operational constraints. While recent advances in AI-based modeling have shown promising results on benchmark datasets, many approaches remain insufficiently grounded in real operational settings. This half-day workshop focuses on AI-enabled solutions for real-world spatiotemporal systems, with particular emphasis on transportation, maritime networks, and low-altitude aviation economies.</p>
+        <!-- ✅ Changed label: Abstract -> About the Workshop -->
+        <p><strong>About the Workshop:</strong> Real-world spatiotemporal systems—such as urban transportation, maritime, and low-altitude aviation economies—generate large, heterogeneous, and continuously evolving data streams with strong spatial dependencies, long-range temporal dynamics, and significant operational constraints. While recent advances in AI-based modeling have shown promising results on benchmark datasets, many approaches remain insufficiently grounded in real operational settings. This half-day workshop focuses on AI-enabled solutions for real-world spatiotemporal systems, with particular emphasis on transportation, maritime networks, and low-altitude aviation economies.</p>
 
         <p>The workshop brings together researchers and leading domain experts with deep system-level knowledge to present real operational challenges, data limitations, and decision-making constraints through invited keynote and expert talks. Building on these real-system perspectives, the workshop explores how modern learning methods—such as deep neural models, graph and sequence representations, state-space approaches, and constraint-aware modeling—can be designed to meaningfully resolve practical spatiotemporal problems, supporting robust prediction and decision-making in complex systems.</p>
       </div>
     </section>
 
-    <!-- ✅ Added: Organizer photo + name -->
+    <!-- ✅ Replaced: big photo cards -> table list with small avatars + affiliations -->
     <section id="organizers">
       <h2>Organizers</h2>
-      <div class="people-grid">
-        <div class="person-card">
-          <!-- Image is in the same folder as this HTML file -->
-          <img src="./fang.jpg" alt="Jiayu Fang">
-          <div class="person-name">Jiayu Fang</div>
-        </div>
-      </div>
+
+      <table class="people-table">
+        <thead>
+          <tr>
+            <th style="width: 72px;">Photo</th>
+            <th style="width: 32%;">Name</th>
+            <th>Affiliation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img class="avatar" src="./fang.jpg" alt="Jiayu Fang">
+            </td>
+            <td>
+              <p class="person-title">Jiayu Fang</p>
+              <p class="person-sub">Workshop Organizer</p>
+              <!-- Optional links; remove if not needed -->
+              <div class="person-links">
+                <!-- <a href="https://example.com">Homepage</a> -->
+                <!-- <a href="mailto:jiayu.fang@sydney.edu.au">Email</a> -->
+              </div>
+            </td>
+            <td>
+              The University of Sydney
+            </td>
+          </tr>
+
+          <!-- ✅ Add more organisers by copying a row like below -->
+          <!--
+          <tr>
+            <td><img class="avatar" src="./name2.jpg" alt="Name Two"></td>
+            <td>
+              <p class="person-title">Name Two</p>
+              <p class="person-sub">Co-organizer</p>
+            </td>
+            <td>Affiliation Two</td>
+          </tr>
+          -->
+        </tbody>
+      </table>
     </section>
 
     <section id="program">
