@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Workshop @ ICANN 2026 - From Real Systems to AI Solutions: Learning for Spatiotemporal Dynamics</title>
   <style>
-    /* ✅ Main page background */
     body {
       font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
       margin: 0;
       line-height: 1.6;
-      background: #0b2530; /* teal-gray */
+      background: #0b2530;
       color: #e8eefc;
       position: relative;
-      overflow-x: hidden; /* prevent pseudo layers causing horizontal scroll */
+      overflow-x: hidden;
     }
 
     /* ✅ AI background layer 1: subtle grid */
@@ -32,7 +31,7 @@
       -webkit-mask-image: radial-gradient(900px 600px at 20% 10%, rgba(0,0,0,1), transparent 70%);
     }
 
-    /* ✅ AI background layer 2: nodes + connections (pure CSS gradients) */
+    /* ✅ AI background layer 2: nodes + connections */
     body::after{
       content:"";
       position: fixed;
@@ -41,15 +40,12 @@
       z-index: 0;
       opacity: .35;
       background:
-        /* soft glow blobs */
-        radial-gradient(400px 260px at 15% 20%, rgba(110,231,255,.18), transparent 70%),
-        radial-gradient(520px 320px at 85% 25%, rgba(138,180,255,.16), transparent 72%),
+        radial-gradient(420px 260px at 18% 22%, rgba(110,231,255,.16), transparent 72%),
+        radial-gradient(520px 320px at 85% 25%, rgba(138,180,255,.12), transparent 74%),
 
-        /* connection lines (diagonal) */
         repeating-linear-gradient(135deg, rgba(190,230,255,.10) 0 1px, transparent 1px 42px),
         repeating-linear-gradient(45deg, rgba(190,230,255,.06) 0 1px, transparent 1px 56px),
 
-        /* nodes (dots) */
         radial-gradient(circle, rgba(190,230,255,.22) 1px, transparent 1.8px),
         radial-gradient(circle, rgba(110,231,255,.18) 1px, transparent 2px);
       background-size:
@@ -61,23 +57,49 @@
         0 0, 0 0,
         0 0, 18px 18px;
 
-      /* fade out towards bottom to keep content clean */
       mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.9) 35%, transparent 95%);
       -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.9) 35%, transparent 95%);
     }
 
-    /* ✅ Make sure content sits above background layers */
+    /* ✅ content above background */
     header, main, footer { position: relative; z-index: 1; }
 
     a { color: #8ab4ff; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ✅ Header: solid navy */
+    /* ✅ Header: change to teal-navy to match body + add its own subtle AI overlay */
     header {
       padding: 48px 20px;
-      background: #142449;
-      border-bottom: 1px solid rgba(180,220,255,.22);
+      background: #0e2b3a; /* ✅ closer to body (#0b2530) */
+      border-bottom: 1px solid rgba(180,220,255,.18);
+      position: relative;
+      overflow: hidden;
     }
+
+    /* ✅ Header AI overlay (lighter than body) */
+    header::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      z-index:0;
+      opacity:.28;
+      background:
+        radial-gradient(520px 320px at 25% 10%, rgba(110,231,255,.18), transparent 70%),
+        radial-gradient(520px 320px at 80% 0%, rgba(138,180,255,.12), transparent 72%),
+        linear-gradient(to right, rgba(190,230,255,.10) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(190,230,255,.08) 1px, transparent 1px),
+        radial-gradient(circle, rgba(190,230,255,.18) 1px, transparent 2px);
+      background-size: auto, auto, 72px 72px, 72px 72px, 48px 48px;
+      background-position: 0 0, 0 0, 0 0, 0 0, 12px 12px;
+
+      /* fade out so title stays clean */
+      mask-image: radial-gradient(900px 420px at 50% 10%, rgba(0,0,0,1), transparent 70%);
+      -webkit-mask-image: radial-gradient(900px 420px at 50% 10%, rgba(0,0,0,1), transparent 70%);
+    }
+
+    /* make header content above its overlay */
+    header .wrap{ position:relative; z-index:1; }
 
     .wrap { max-width: 980px; margin: 0 auto; }
     h1 { margin: 0 0 8px; font-size: 34px; }
@@ -86,14 +108,14 @@
     nav { margin-top: 18px; display: flex; gap: 14px; flex-wrap: wrap; }
     nav a {
       padding: 8px 12px;
-      border: 1px solid rgba(190,230,255,.30);
+      border: 1px solid rgba(170,240,235,.28);      /* ✅ more teal */
       border-radius: 10px;
-      background: rgba(255,255,255,.07);
+      background: rgba(255,255,255,.08);
       backdrop-filter: blur(6px);
     }
     nav a:hover{
-      background: rgba(255,255,255,.12);
-      border-color: rgba(190,230,255,.45);
+      background: rgba(255,255,255,.13);
+      border-color: rgba(170,240,235,.42);
     }
 
     main { padding: 28px 20px 64px; }
@@ -120,7 +142,6 @@
     code { background: rgba(255,255,255,.10); padding: 2px 6px; border-radius: 8px; }
     .muted { opacity: .86; }
 
-    /* Table style for program schedule */
     table { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 14px; }
     th, td { padding: 12px 14px; border-bottom: 1px solid rgba(180,220,255,.14); vertical-align: top; }
     th {
@@ -131,7 +152,6 @@
     }
     tr:last-child td { border-bottom: none; }
 
-    /* Organisers table list */
     .people-table {
       width: 100%;
       border-collapse: separate;
@@ -163,22 +183,9 @@
       background: rgba(255,255,255,.06);
       display: block;
     }
-    .person-title{
-      font-weight: 600;
-      margin: 0;
-    }
-    .person-sub{
-      margin: 2px 0 0;
-      font-size: 14px;
-      opacity: .88;
-    }
-    .person-links{
-      margin-top: 6px;
-      font-size: 14px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+    .person-title{ font-weight: 600; margin: 0; }
+    .person-sub{ margin: 2px 0 0; font-size: 14px; opacity: .88; }
+    .person-links{ margin-top: 6px; font-size: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
   </style>
 </head>
 <body>
