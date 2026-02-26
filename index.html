@@ -5,30 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Workshop @ ICANN 2026 - From Real Systems to AI Solutions: Learning for Spatiotemporal Dynamics</title>
   <style>
-    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
-           margin: 0; line-height: 1.6; background: #0b0f19; color: #e8eefc; }
+    body {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(138,180,255,.10), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(110,231,255,.08), transparent 55%),
+        #0f172a;
+      color: #e8eefc;
+    }
+
     a { color: #8ab4ff; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    header { padding: 48px 20px; background: #111a2e; border-bottom: 1px solid #223055; }
+
+    header {
+      padding: 48px 20px;
+      background: #111a2e;
+      border-bottom: 1px solid rgba(138,180,255,.16);
+    }
+
     .wrap { max-width: 980px; margin: 0 auto; }
+
     h1 { margin: 0 0 8px; font-size: 34px; }
     .subtitle { opacity: .9; margin: 0; }
+
     nav { margin-top: 18px; display: flex; gap: 14px; flex-wrap: wrap; }
-    nav a { padding: 8px 12px; border: 1px solid #2b3a67; border-radius: 10px; background: rgba(255,255,255,.03); }
+    nav a {
+      padding: 8px 12px;
+      border: 1px solid rgba(138,180,255,.22);
+      border-radius: 10px;
+      background: rgba(138,180,255,.06);
+    }
+    nav a:hover{
+      background: rgba(138,180,255,.12);
+      border-color: rgba(138,180,255,.35);
+    }
+
     main { padding: 28px 20px 64px; }
-    section { padding: 22px 0; border-bottom: 1px solid #1f2a4a; }
+
+    section { padding: 22px 0; border-bottom: 1px solid rgba(138,180,255,.14); }
+
     h2 { margin: 0 0 10px; font-size: 24px; }
     ul { margin: 10px 0 0 20px; }
-    .card { border: 1px solid #26345d; background: rgba(255,255,255,.03); border-radius: 14px; padding: 16px; }
+
+    .card {
+      border: 1px solid rgba(138,180,255,.18);
+      background: rgba(255,255,255,.06);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
     .dates li { margin: 6px 0; }
+
     footer { padding: 24px 20px; opacity: .75; }
     code { background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 8px; }
     .muted { opacity: .85; }
 
     /* Table style for program schedule */
     table { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 14px; }
-    th, td { padding: 12px 14px; border-bottom: 1px solid #1f2a4a; vertical-align: top; }
-    th { text-align: left; font-weight: 600; background: rgba(255,255,255,.04); border-bottom: 1px solid #26345d; }
+    th, td { padding: 12px 14px; border-bottom: 1px solid rgba(138,180,255,.12); vertical-align: top; }
+    th {
+      text-align: left;
+      font-weight: 600;
+      background: rgba(255,255,255,.07);
+      border-bottom: 1px solid rgba(138,180,255,.18);
+    }
     tr:last-child td { border-bottom: none; }
 
     /* Organisers table list */
@@ -38,16 +80,16 @@
       border-spacing: 0;
       overflow: hidden;
       border-radius: 14px;
-      border: 1px solid #26345d;
-      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(138,180,255,.18);
+      background: rgba(255,255,255,.05);
     }
     .people-table thead th{
-      background: rgba(255,255,255,.04);
-      border-bottom: 1px solid #26345d;
+      background: rgba(255,255,255,.07);
+      border-bottom: 1px solid rgba(138,180,255,.18);
     }
     .people-table td, .people-table th{
       padding: 12px 14px;
-      border-bottom: 1px solid #1f2a4a;
+      border-bottom: 1px solid rgba(138,180,255,.12);
       vertical-align: middle;
     }
     .people-table tr:last-child td{
@@ -58,8 +100,8 @@
       height: 56px;
       border-radius: 12px;
       object-fit: cover;
-      border: 1px solid #223055;
-      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(138,180,255,.18);
+      background: rgba(255,255,255,.05);
       display: block;
     }
     .person-title{
@@ -100,7 +142,6 @@
     <section id="about">
       <h2>About the Workshop</h2>
       <div class="card">
-        <!-- ✅ Removed title line and removed the keyword “Abstract/About the Workshop:” -->
         <p>
           Real-world spatiotemporal systems (e.g., transportation and maritime networks) produce heterogeneous,
           evolving data with strong spatial dependencies and long-range temporal dynamics. This half-day workshop
@@ -123,7 +164,6 @@
           </tr>
         </thead>
 
-        <!-- ✅ Reordered organizers + updated titles for Jiayu Fang and Ze Wang -->
         <tbody>
           <!-- 1) Professor Junbin Gao -->
           <tr>
@@ -133,10 +173,7 @@
             <td>
               <p class="person-title">Professor Junbin Gao</p>
               <p class="person-sub">Professor</p>
-              <div class="person-links">
-                <!-- <a href="https://example.com">Homepage</a> -->
-                <!-- <a href="mailto:xxx@xxx">Email</a> -->
-              </div>
+              <div class="person-links"></div>
             </td>
             <td>
               Professor of Big Data Analytics, Discipline of Business Analytics<br/>
@@ -152,8 +189,7 @@
             <td>
               <p class="person-title">Dr. Zhiqi Shao</p>
               <p class="person-sub">Assistant Professor</p>
-              <div class="person-links">
-              </div>
+              <div class="person-links"></div>
             </td>
             <td>
               Assistant Professor, School of Economics and Business Administration<br/>
@@ -169,10 +205,7 @@
             <td>
               <p class="person-title">Mr. Jiayu Fang</p>
               <p class="person-sub">Researcher</p>
-              <div class="person-links">
-                <!-- <a href="https://example.com">Homepage</a> -->
-                <!-- <a href="mailto:jiayu.fang@sydney.edu.au">Email</a> -->
-              </div>
+              <div class="person-links"></div>
             </td>
             <td>
               The University of Sydney
@@ -187,8 +220,7 @@
             <td>
               <p class="person-title">Professor Michael Bell</p>
               <p class="person-sub">Professor</p>
-              <div class="person-links">
-              </div>
+              <div class="person-links"></div>
             </td>
             <td>
               Professor of Ports and Maritime Logistics<br/>
@@ -204,8 +236,7 @@
             <td>
               <p class="person-title">Dr. Ze Wang</p>
               <p class="person-sub">Researcher</p>
-              <div class="person-links">
-              </div>
+              <div class="person-links"></div>
             </td>
             <td>
               ITLS, The University of Sydney
@@ -220,8 +251,7 @@
             <td>
               <p class="person-title">Dr. Haoning Xi</p>
               <p class="person-sub">Senior Lecturer</p>
-              <div class="person-links">
-              </div>
+              <div class="person-links"></div>
             </td>
             <td>
               Senior Lecturer at The University of Newcastle Business School
@@ -236,8 +266,7 @@
             <td>
               <p class="person-title">Dr. Shoujin Wang</p>
               <p class="person-sub">Lecturer</p>
-              <div class="person-links">
-              </div>
+              <div class="person-links"></div>
             </td>
             <td>
               Lecturer of The Data Science Institute, University of Technology Sydney
@@ -339,7 +368,6 @@
       </div>
     </section>
 
-    <!-- ✅ Moved Program Schedule to the last -->
     <section id="program">
       <h2>Program Schedule (Planned)</h2>
       <div class="card">
