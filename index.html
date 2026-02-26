@@ -5,25 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Workshop @ ICANN 2026 - From Real Systems to AI Solutions: Learning for Spatiotemporal Dynamics</title>
   <style>
-    /* ✅ Main page background: teal-gray, clearly different from header */
+    /* ✅ Main page background */
     body {
       font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
       margin: 0;
       line-height: 1.6;
-      background:
-        radial-gradient(1200px 700px at 20% -10%, rgba(110,231,255,.10), transparent 60%),
-        radial-gradient(900px 600px at 85% 10%, rgba(138,180,255,.08), transparent 55%),
-        #0b2530; /* ✅ teal-gray */
+      background: #0b2530; /* teal-gray */
       color: #e8eefc;
+      position: relative;
+      overflow-x: hidden; /* prevent pseudo layers causing horizontal scroll */
     }
+
+    /* ✅ AI background layer 1: subtle grid */
+    body::before{
+      content:"";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: .22;
+      background:
+        linear-gradient(to right, rgba(190,230,255,.10) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(190,230,255,.08) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(900px 600px at 20% 10%, rgba(0,0,0,1), transparent 70%);
+      -webkit-mask-image: radial-gradient(900px 600px at 20% 10%, rgba(0,0,0,1), transparent 70%);
+    }
+
+    /* ✅ AI background layer 2: nodes + connections (pure CSS gradients) */
+    body::after{
+      content:"";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: .35;
+      background:
+        /* soft glow blobs */
+        radial-gradient(400px 260px at 15% 20%, rgba(110,231,255,.18), transparent 70%),
+        radial-gradient(520px 320px at 85% 25%, rgba(138,180,255,.16), transparent 72%),
+
+        /* connection lines (diagonal) */
+        repeating-linear-gradient(135deg, rgba(190,230,255,.10) 0 1px, transparent 1px 42px),
+        repeating-linear-gradient(45deg, rgba(190,230,255,.06) 0 1px, transparent 1px 56px),
+
+        /* nodes (dots) */
+        radial-gradient(circle, rgba(190,230,255,.22) 1px, transparent 1.8px),
+        radial-gradient(circle, rgba(110,231,255,.18) 1px, transparent 2px);
+      background-size:
+        auto, auto,
+        auto, auto,
+        36px 36px, 72px 72px;
+      background-position:
+        0 0, 0 0,
+        0 0, 0 0,
+        0 0, 18px 18px;
+
+      /* fade out towards bottom to keep content clean */
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.9) 35%, transparent 95%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.9) 35%, transparent 95%);
+    }
+
+    /* ✅ Make sure content sits above background layers */
+    header, main, footer { position: relative; z-index: 1; }
 
     a { color: #8ab4ff; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ✅ Header: remove gradients, keep solid brighter navy */
+    /* ✅ Header: solid navy */
     header {
       padding: 48px 20px;
-      background: #142449; /* ✅ solid color only */
+      background: #142449;
       border-bottom: 1px solid rgba(180,220,255,.22);
     }
 
@@ -46,7 +98,6 @@
 
     main { padding: 28px 20px 64px; }
 
-    /* ✅ Section separators: softer and brighter */
     section {
       padding: 22px 0;
       border-bottom: 1px solid rgba(180,220,255,.16);
@@ -55,7 +106,6 @@
     h2 { margin: 0 0 10px; font-size: 24px; }
     ul { margin: 10px 0 0 20px; }
 
-    /* ✅ Cards: lighter, more readable on teal-gray background */
     .card {
       border: 1px solid rgba(190,230,255,.22);
       background: rgba(255,255,255,.07);
