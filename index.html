@@ -5,49 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Workshop @ ICANN 2026 - From Real Systems to AI Solutions: Learning for Spatiotemporal Dynamics</title>
   <style>
+    /* ✅ Brighter overall background (body + AI layers) */
     body {
       font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
       margin: 0;
       line-height: 1.6;
-      background: #0b2530;
+      background: #0f3442; /* ✅ brighter teal-gray than before */
       color: #e8eefc;
       position: relative;
       overflow-x: hidden;
     }
 
-    /* ✅ AI background layer 1: subtle grid */
+    /* ✅ AI background layer 1: grid (brighter + slightly higher opacity) */
     body::before{
       content:"";
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: 0;
-      opacity: .22;
+      opacity: .32; /* ↑ */
       background:
-        linear-gradient(to right, rgba(190,230,255,.10) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(190,230,255,.08) 1px, transparent 1px);
+        linear-gradient(to right, rgba(200,245,255,.16) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(200,245,255,.12) 1px, transparent 1px);
       background-size: 64px 64px;
-      mask-image: radial-gradient(900px 600px at 20% 10%, rgba(0,0,0,1), transparent 70%);
-      -webkit-mask-image: radial-gradient(900px 600px at 20% 10%, rgba(0,0,0,1), transparent 70%);
+      mask-image: radial-gradient(950px 650px at 22% 12%, rgba(0,0,0,1), transparent 72%);
+      -webkit-mask-image: radial-gradient(950px 650px at 22% 12%, rgba(0,0,0,1), transparent 72%);
     }
 
-    /* ✅ AI background layer 2: nodes + connections */
+    /* ✅ AI background layer 2: nodes + connections (brighter) */
     body::after{
       content:"";
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: 0;
-      opacity: .35;
+      opacity: .48; /* ↑ */
       background:
-        radial-gradient(420px 260px at 18% 22%, rgba(110,231,255,.16), transparent 72%),
-        radial-gradient(520px 320px at 85% 25%, rgba(138,180,255,.12), transparent 74%),
+        radial-gradient(520px 340px at 18% 24%, rgba(110,231,255,.22), transparent 72%),
+        radial-gradient(620px 380px at 85% 25%, rgba(138,180,255,.18), transparent 74%),
 
-        repeating-linear-gradient(135deg, rgba(190,230,255,.10) 0 1px, transparent 1px 42px),
-        repeating-linear-gradient(45deg, rgba(190,230,255,.06) 0 1px, transparent 1px 56px),
+        repeating-linear-gradient(135deg, rgba(210,250,255,.14) 0 1px, transparent 1px 42px),
+        repeating-linear-gradient(45deg, rgba(210,250,255,.10) 0 1px, transparent 1px 56px),
 
-        radial-gradient(circle, rgba(190,230,255,.22) 1px, transparent 1.8px),
-        radial-gradient(circle, rgba(110,231,255,.18) 1px, transparent 2px);
+        radial-gradient(circle, rgba(210,250,255,.26) 1px, transparent 1.9px),
+        radial-gradient(circle, rgba(110,231,255,.22) 1px, transparent 2.1px);
       background-size:
         auto, auto,
         auto, auto,
@@ -57,8 +58,8 @@
         0 0, 0 0,
         0 0, 18px 18px;
 
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.9) 35%, transparent 95%);
-      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.9) 35%, transparent 95%);
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.92) 35%, transparent 96%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.92) 35%, transparent 96%);
     }
 
     /* ✅ content above background */
@@ -67,88 +68,86 @@
     a { color: #8ab4ff; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ✅ Header: change to teal-navy to match body + add its own subtle AI overlay */
+    /* ✅ Header: brighter teal-navy + stronger overlay */
     header {
       padding: 48px 20px;
-      background: #0e2b3a; /* ✅ closer to body (#0b2530) */
-      border-bottom: 1px solid rgba(180,220,255,.18);
+      background: #133a4b; /* ✅ brighter than before */
+      border-bottom: 1px solid rgba(200,245,255,.22);
       position: relative;
       overflow: hidden;
     }
 
-    /* ✅ Header AI overlay (lighter than body) */
     header::before{
       content:"";
       position:absolute;
       inset:0;
       pointer-events:none;
       z-index:0;
-      opacity:.28;
+      opacity:.40; /* ↑ */
       background:
-        radial-gradient(520px 320px at 25% 10%, rgba(110,231,255,.18), transparent 70%),
-        radial-gradient(520px 320px at 80% 0%, rgba(138,180,255,.12), transparent 72%),
-        linear-gradient(to right, rgba(190,230,255,.10) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(190,230,255,.08) 1px, transparent 1px),
-        radial-gradient(circle, rgba(190,230,255,.18) 1px, transparent 2px);
+        radial-gradient(620px 380px at 25% 10%, rgba(110,231,255,.22), transparent 70%),
+        radial-gradient(620px 380px at 80% 0%, rgba(138,180,255,.16), transparent 72%),
+        linear-gradient(to right, rgba(210,250,255,.14) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(210,250,255,.10) 1px, transparent 1px),
+        radial-gradient(circle, rgba(210,250,255,.22) 1px, transparent 2.2px);
       background-size: auto, auto, 72px 72px, 72px 72px, 48px 48px;
       background-position: 0 0, 0 0, 0 0, 0 0, 12px 12px;
 
-      /* fade out so title stays clean */
-      mask-image: radial-gradient(900px 420px at 50% 10%, rgba(0,0,0,1), transparent 70%);
-      -webkit-mask-image: radial-gradient(900px 420px at 50% 10%, rgba(0,0,0,1), transparent 70%);
+      mask-image: radial-gradient(980px 460px at 50% 10%, rgba(0,0,0,1), transparent 72%);
+      -webkit-mask-image: radial-gradient(980px 460px at 50% 10%, rgba(0,0,0,1), transparent 72%);
     }
 
-    /* make header content above its overlay */
     header .wrap{ position:relative; z-index:1; }
 
     .wrap { max-width: 980px; margin: 0 auto; }
     h1 { margin: 0 0 8px; font-size: 34px; }
-    .subtitle { opacity: .92; margin: 0; }
+    .subtitle { opacity: .94; margin: 0; }
 
     nav { margin-top: 18px; display: flex; gap: 14px; flex-wrap: wrap; }
     nav a {
       padding: 8px 12px;
-      border: 1px solid rgba(170,240,235,.28);      /* ✅ more teal */
+      border: 1px solid rgba(200,245,255,.34); /* ↑ */
       border-radius: 10px;
-      background: rgba(255,255,255,.08);
+      background: rgba(255,255,255,.10);        /* ↑ */
       backdrop-filter: blur(6px);
     }
     nav a:hover{
-      background: rgba(255,255,255,.13);
-      border-color: rgba(170,240,235,.42);
+      background: rgba(255,255,255,.16);
+      border-color: rgba(200,245,255,.52);
     }
 
     main { padding: 28px 20px 64px; }
 
     section {
       padding: 22px 0;
-      border-bottom: 1px solid rgba(180,220,255,.16);
+      border-bottom: 1px solid rgba(200,245,255,.16);
     }
 
     h2 { margin: 0 0 10px; font-size: 24px; }
     ul { margin: 10px 0 0 20px; }
 
+    /* ✅ cards a bit brighter too */
     .card {
-      border: 1px solid rgba(190,230,255,.22);
-      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(200,245,255,.24);
+      background: rgba(255,255,255,.09);
       border-radius: 14px;
       padding: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.18);
+      box-shadow: 0 12px 34px rgba(0,0,0,.20);
     }
 
     .dates li { margin: 6px 0; }
 
-    footer { padding: 24px 20px; opacity: .78; }
-    code { background: rgba(255,255,255,.10); padding: 2px 6px; border-radius: 8px; }
-    .muted { opacity: .86; }
+    footer { padding: 24px 20px; opacity: .80; }
+    code { background: rgba(255,255,255,.12); padding: 2px 6px; border-radius: 8px; }
+    .muted { opacity: .88; }
 
     table { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 14px; }
-    th, td { padding: 12px 14px; border-bottom: 1px solid rgba(180,220,255,.14); vertical-align: top; }
+    th, td { padding: 12px 14px; border-bottom: 1px solid rgba(200,245,255,.14); vertical-align: top; }
     th {
       text-align: left;
       font-weight: 600;
-      background: rgba(255,255,255,.10);
-      border-bottom: 1px solid rgba(190,230,255,.22);
+      background: rgba(255,255,255,.12);
+      border-bottom: 1px solid rgba(200,245,255,.22);
     }
     tr:last-child td { border-bottom: none; }
 
@@ -158,17 +157,17 @@
       border-spacing: 0;
       overflow: hidden;
       border-radius: 14px;
-      border: 1px solid rgba(190,230,255,.22);
-      background: rgba(255,255,255,.06);
-      box-shadow: 0 10px 30px rgba(0,0,0,.16);
+      border: 1px solid rgba(200,245,255,.22);
+      background: rgba(255,255,255,.08);
+      box-shadow: 0 12px 34px rgba(0,0,0,.18);
     }
     .people-table thead th{
-      background: rgba(255,255,255,.10);
-      border-bottom: 1px solid rgba(190,230,255,.22);
+      background: rgba(255,255,255,.12);
+      border-bottom: 1px solid rgba(200,245,255,.22);
     }
     .people-table td, .people-table th{
       padding: 12px 14px;
-      border-bottom: 1px solid rgba(180,220,255,.14);
+      border-bottom: 1px solid rgba(200,245,255,.14);
       vertical-align: middle;
     }
     .people-table tr:last-child td{
@@ -179,12 +178,12 @@
       height: 56px;
       border-radius: 12px;
       object-fit: cover;
-      border: 1px solid rgba(190,230,255,.22);
-      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(200,245,255,.24);
+      background: rgba(255,255,255,.08);
       display: block;
     }
     .person-title{ font-weight: 600; margin: 0; }
-    .person-sub{ margin: 2px 0 0; font-size: 14px; opacity: .88; }
+    .person-sub{ margin: 2px 0 0; font-size: 14px; opacity: .90; }
     .person-links{ margin-top: 6px; font-size: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
   </style>
 </head>
