@@ -5,71 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Workshop @ ICANN 2026 - From Real Systems to AI Solutions: Learning for Spatiotemporal Dynamics</title>
   <style>
+    /* ✅ Main page background: teal-gray, clearly different from header */
     body {
       font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
       margin: 0;
       line-height: 1.6;
       background:
-        radial-gradient(1200px 600px at 20% -10%, rgba(138,180,255,.10), transparent 60%),
-        radial-gradient(900px 500px at 90% 0%, rgba(110,231,255,.08), transparent 55%),
-        #0f172a;
+        radial-gradient(1200px 700px at 20% -10%, rgba(110,231,255,.10), transparent 60%),
+        radial-gradient(900px 600px at 85% 10%, rgba(138,180,255,.08), transparent 55%),
+        #0b2530; /* ✅ teal-gray */
       color: #e8eefc;
     }
 
     a { color: #8ab4ff; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* ✅ Header: brighter navy, visually separated */
     header {
       padding: 48px 20px;
-      background: #111a2e;
-      border-bottom: 1px solid rgba(138,180,255,.16);
+      background:
+        radial-gradient(900px 520px at 20% -30%, rgba(138,180,255,.22), transparent 55%),
+        radial-gradient(780px 520px at 90% 0%, rgba(110,231,255,.16), transparent 55%),
+        #142449; /* ✅ brighter than before */
+      border-bottom: 1px solid rgba(180,220,255,.22);
     }
 
     .wrap { max-width: 980px; margin: 0 auto; }
-
     h1 { margin: 0 0 8px; font-size: 34px; }
-    .subtitle { opacity: .9; margin: 0; }
+    .subtitle { opacity: .92; margin: 0; }
 
     nav { margin-top: 18px; display: flex; gap: 14px; flex-wrap: wrap; }
     nav a {
       padding: 8px 12px;
-      border: 1px solid rgba(138,180,255,.22);
+      border: 1px solid rgba(190,230,255,.30);
       border-radius: 10px;
-      background: rgba(138,180,255,.06);
+      background: rgba(255,255,255,.07);
+      backdrop-filter: blur(6px);
     }
     nav a:hover{
-      background: rgba(138,180,255,.12);
-      border-color: rgba(138,180,255,.35);
+      background: rgba(255,255,255,.12);
+      border-color: rgba(190,230,255,.45);
     }
 
     main { padding: 28px 20px 64px; }
 
-    section { padding: 22px 0; border-bottom: 1px solid rgba(138,180,255,.14); }
+    /* ✅ Section separators: softer and brighter */
+    section {
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(180,220,255,.16);
+    }
 
     h2 { margin: 0 0 10px; font-size: 24px; }
     ul { margin: 10px 0 0 20px; }
 
+    /* ✅ Cards: lighter, more readable on teal-gray background */
     .card {
-      border: 1px solid rgba(138,180,255,.18);
-      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(190,230,255,.22);
+      background: rgba(255,255,255,.07);
       border-radius: 14px;
       padding: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.18);
     }
 
     .dates li { margin: 6px 0; }
 
-    footer { padding: 24px 20px; opacity: .75; }
-    code { background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 8px; }
-    .muted { opacity: .85; }
+    footer { padding: 24px 20px; opacity: .78; }
+    code { background: rgba(255,255,255,.10); padding: 2px 6px; border-radius: 8px; }
+    .muted { opacity: .86; }
 
     /* Table style for program schedule */
     table { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 14px; }
-    th, td { padding: 12px 14px; border-bottom: 1px solid rgba(138,180,255,.12); vertical-align: top; }
+    th, td { padding: 12px 14px; border-bottom: 1px solid rgba(180,220,255,.14); vertical-align: top; }
     th {
       text-align: left;
       font-weight: 600;
-      background: rgba(255,255,255,.07);
-      border-bottom: 1px solid rgba(138,180,255,.18);
+      background: rgba(255,255,255,.10);
+      border-bottom: 1px solid rgba(190,230,255,.22);
     }
     tr:last-child td { border-bottom: none; }
 
@@ -80,16 +91,17 @@
       border-spacing: 0;
       overflow: hidden;
       border-radius: 14px;
-      border: 1px solid rgba(138,180,255,.18);
-      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(190,230,255,.22);
+      background: rgba(255,255,255,.06);
+      box-shadow: 0 10px 30px rgba(0,0,0,.16);
     }
     .people-table thead th{
-      background: rgba(255,255,255,.07);
-      border-bottom: 1px solid rgba(138,180,255,.18);
+      background: rgba(255,255,255,.10);
+      border-bottom: 1px solid rgba(190,230,255,.22);
     }
     .people-table td, .people-table th{
       padding: 12px 14px;
-      border-bottom: 1px solid rgba(138,180,255,.12);
+      border-bottom: 1px solid rgba(180,220,255,.14);
       vertical-align: middle;
     }
     .people-table tr:last-child td{
@@ -100,8 +112,8 @@
       height: 56px;
       border-radius: 12px;
       object-fit: cover;
-      border: 1px solid rgba(138,180,255,.18);
-      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(190,230,255,.22);
+      background: rgba(255,255,255,.06);
       display: block;
     }
     .person-title{
@@ -111,7 +123,7 @@
     .person-sub{
       margin: 2px 0 0;
       font-size: 14px;
-      opacity: .85;
+      opacity: .88;
     }
     .person-links{
       margin-top: 6px;
@@ -165,11 +177,8 @@
         </thead>
 
         <tbody>
-          <!-- 1) Professor Junbin Gao -->
           <tr>
-            <td>
-              <img class="avatar" src="./junbin1.jpg" alt="Professor Junbin Gao">
-            </td>
+            <td><img class="avatar" src="./junbin1.jpg" alt="Professor Junbin Gao"></td>
             <td>
               <p class="person-title">Professor Junbin Gao</p>
               <p class="person-sub">Professor</p>
@@ -181,11 +190,8 @@
             </td>
           </tr>
 
-          <!-- 2) Dr. Zhiqi Shao -->
           <tr>
-            <td>
-              <img class="avatar" src="./zhiqi.jpg" alt="Assistant Professor Zhiqi">
-            </td>
+            <td><img class="avatar" src="./zhiqi.jpg" alt="Assistant Professor Zhiqi"></td>
             <td>
               <p class="person-title">Dr. Zhiqi Shao</p>
               <p class="person-sub">Assistant Professor</p>
@@ -197,11 +203,8 @@
             </td>
           </tr>
 
-          <!-- 3) Mr. Jiayu Fang -->
           <tr>
-            <td>
-              <img class="avatar" src="./fang.jpg" alt="Jiayu Fang">
-            </td>
+            <td><img class="avatar" src="./fang.jpg" alt="Jiayu Fang"></td>
             <td>
               <p class="person-title">Mr. Jiayu Fang</p>
               <p class="person-sub">Researcher</p>
@@ -212,11 +215,8 @@
             </td>
           </tr>
 
-          <!-- 4) Professor Michael Bell -->
           <tr>
-            <td>
-              <img class="avatar" src="./Bell.jpg" alt="Professor Michael Bell">
-            </td>
+            <td><img class="avatar" src="./Bell.jpg" alt="Professor Michael Bell"></td>
             <td>
               <p class="person-title">Professor Michael Bell</p>
               <p class="person-sub">Professor</p>
@@ -228,11 +228,8 @@
             </td>
           </tr>
 
-          <!-- 5) Dr. Ze Wang -->
           <tr>
-            <td>
-              <img class="avatar" src="./zewang.jpg" alt="Zewang">
-            </td>
+            <td><img class="avatar" src="./zewang.jpg" alt="Zewang"></td>
             <td>
               <p class="person-title">Dr. Ze Wang</p>
               <p class="person-sub">Researcher</p>
@@ -243,11 +240,8 @@
             </td>
           </tr>
 
-          <!-- 6) Dr. Haoning Xi -->
           <tr>
-            <td>
-              <img class="avatar" src="./haoning.png" alt="Dr. Haoning Xi">
-            </td>
+            <td><img class="avatar" src="./haoning.png" alt="Dr. Haoning Xi"></td>
             <td>
               <p class="person-title">Dr. Haoning Xi</p>
               <p class="person-sub">Senior Lecturer</p>
@@ -258,11 +252,8 @@
             </td>
           </tr>
 
-          <!-- 7) Dr. Shoujin Wang -->
           <tr>
-            <td>
-              <img class="avatar" src="./shoujin.jpg" alt="Shoujin">
-            </td>
+            <td><img class="avatar" src="./shoujin.jpg" alt="Shoujin"></td>
             <td>
               <p class="person-title">Dr. Shoujin Wang</p>
               <p class="person-sub">Lecturer</p>
