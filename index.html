@@ -101,7 +101,16 @@
 
     .wrap { max-width: 980px; margin: 0 auto; }
     h1 { margin: 0 0 8px; font-size: 34px; }
-    .subtitle { opacity: .94; margin: 0; }
+
+    /* ✅ 这里改了：subtitle 变大 */
+    .subtitle {
+      opacity: .94;
+      margin: 0;
+      font-size: 24px;   /* 你想更大就改这里，比如 28px */
+      line-height: 1.3;
+    }
+    /* ✅ 让 subtitle 里的链接颜色跟文字一致（可删） */
+    .subtitle a{ color: inherit; }
 
     nav { margin-top: 18px; display: flex; gap: 14px; flex-wrap: wrap; }
     nav a {
@@ -414,18 +423,15 @@
         <p><strong>Submission format:</strong> <a href="https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj#.WuA4JS5uZpi" target="_blank" rel="noopener">Springer LNCS (Overleaf template)</a></p>
         <p><strong>Submission length:</strong> full papers (up to 12 pages)</p>
 
+        <!-- ✅ 这里改了：替换为“通知口吻”的双盲说明 -->
         <p class="muted">
-          Paper submission must be in English. Review policy, anonymity requirements, and publication information
-          will follow ICANN workshop guidelines and will be announced together with the submission portal.
+          This workshop uses a double-blind review process.
         </p>
 
         <p class="muted">
           Accepted papers that comply with the ICANN 2026 regular paper guidelines will be published in the ICANN 2026 Workshop Proceedings.
         </p>
 
-        <p class="muted">
-          This workshop adopts a double-blind review process for paper submissions.
-        </p>
       </div>
     </section>
 
